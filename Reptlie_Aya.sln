@@ -6,6 +6,7 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Aya", "Aya\", "{5B6714BA-E1E0-4D25-820B-3B4087165CD2}"
 	ProjectSection(WebsiteProperties) = preProject
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		ProjectReferences = "{e01bf00b-4725-47a9-8da6-3ffbd87f3ec1}|Base.Common.dll;{03382430-CECD-4708-939B-7F78927DE07B}|Base.Entity.dll;"
 		Debug.AspNetCompiler.VirtualPath = "/localhost_53391"
 		Debug.AspNetCompiler.PhysicalPath = "Aya\"
 		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_53391\"
@@ -21,19 +22,48 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Aya", "Aya\", "{5B6714BA-E1
 		Release.AspNetCompiler.FixedNames = "false"
 		Release.AspNetCompiler.Debug = "False"
 		VWDPort = "53391"
+		SlnRelativePath = "Aya\"
 		DefaultWebSiteLanguage = "Visual C#"
 	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Aya.Base", "Aya.Base", "{F8327DAE-6AC4-496B-A9FC-10BCE26D5D08}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Base.Common", "Aya.Base\Base.Common\Base.Common.csproj", "{E01BF00B-4725-47A9-8DA6-3FFBD87F3EC1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Base.Entity", "Aya.Base\Base.Entity\Base.Entity.csproj", "{03382430-CECD-4708-939B-7F78927DE07B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Base.Logic", "Aya.Base\Base.Logic\Base.Logic.csproj", "{437BB321-4A85-4A8D-9690-4D86B92E5545}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{5B6714BA-E1E0-4D25-820B-3B4087165CD2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{5B6714BA-E1E0-4D25-820B-3B4087165CD2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B6714BA-E1E0-4D25-820B-3B4087165CD2}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B6714BA-E1E0-4D25-820B-3B4087165CD2}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{E01BF00B-4725-47A9-8DA6-3FFBD87F3EC1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E01BF00B-4725-47A9-8DA6-3FFBD87F3EC1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E01BF00B-4725-47A9-8DA6-3FFBD87F3EC1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E01BF00B-4725-47A9-8DA6-3FFBD87F3EC1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{03382430-CECD-4708-939B-7F78927DE07B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03382430-CECD-4708-939B-7F78927DE07B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03382430-CECD-4708-939B-7F78927DE07B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03382430-CECD-4708-939B-7F78927DE07B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{437BB321-4A85-4A8D-9690-4D86B92E5545}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{437BB321-4A85-4A8D-9690-4D86B92E5545}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{437BB321-4A85-4A8D-9690-4D86B92E5545}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{437BB321-4A85-4A8D-9690-4D86B92E5545}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E01BF00B-4725-47A9-8DA6-3FFBD87F3EC1} = {F8327DAE-6AC4-496B-A9FC-10BCE26D5D08}
+		{03382430-CECD-4708-939B-7F78927DE07B} = {F8327DAE-6AC4-496B-A9FC-10BCE26D5D08}
+		{437BB321-4A85-4A8D-9690-4D86B92E5545} = {F8327DAE-6AC4-496B-A9FC-10BCE26D5D08}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D7D5747A-9725-411E-AB8F-59274DB0879A}
