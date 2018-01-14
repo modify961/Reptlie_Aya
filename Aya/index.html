@@ -13,7 +13,8 @@
   <link rel="stylesheet" href="css/app.css" type="text/css" />
 </head>
 <body ng-controller="AppCtrl">
-  <div class="app" id="app" ng-class="{'app-header-fixed':app.settings.headerFixed, 'app-aside-fixed':app.settings.asideFixed, 'app-aside-folded':app.settings.asideFolded, 'app-aside-dock':app.settings.asideDock, 'container':app.settings.container}" ui-view>
+  <div class="app" id="app" 
+       ng-class="{'app-header-fixed':app.settings.headerFixed, 'app-aside-fixed':app.settings.asideFixed, 'app-aside-folded':app.settings.asideFolded, 'app-aside-dock':app.settings.asideDock, 'container':app.settings.container}" ui-view>
 
   </div>
 
@@ -32,7 +33,7 @@
 <!-- Vendor -->
   <script src="vendor/angular/angular-ui-router/angular-ui-router.js"></script> 
   <script src="vendor/angular/ngstorage/ngStorage.js"></script>
-
+     
   <!-- bootstrap -->
   <script src="vendor/angular/angular-bootstrap/ui-bootstrap-tpls.js"></script>
   <!-- lazyload -->

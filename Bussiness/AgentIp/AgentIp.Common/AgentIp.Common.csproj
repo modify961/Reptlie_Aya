@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{437BB321-4A85-4A8D-9690-4D86B92E5545}</ProjectGuid>
+    <ProjectGuid>{B106E7D1-6008-4686-B0BE-08EE364439ED}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Base.Logic</RootNamespace>
-    <AssemblyName>Base.Logic</AssemblyName>
+    <RootNamespace>AgentIp.Common</RootNamespace>
+    <AssemblyName>AgentIp.Common</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
@@ -35,10 +35,6 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.ServiceModel" />
-    <Reference Include="System.ServiceModel.Activities" />
-    <Reference Include="System.ServiceModel.Web" />
-    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -46,20 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Basis\Foundation.cs" />
-    <Compile Include="Basis\FoundationServer.cs" />
-    <Compile Include="Basis\IFoundation.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Base.Common\Base.Common.csproj">
-      <Project>{e01bf00b-4725-47a9-8da6-3ffbd87f3ec1}</Project>
-      <Name>Base.Common</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Base.Entity\Base.Entity.csproj">
-      <Project>{03382430-cecd-4708-939b-7f78927de07b}</Project>
-      <Name>Base.Entity</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

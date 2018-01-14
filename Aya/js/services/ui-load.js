@@ -20,19 +20,19 @@ angular.module('ui.load', [])
 		 * @param srcs array, script or css
 		 * @returns {*} Promise that will be resolved once the sources has been loaded.
 		 */
-		this.load = function (srcs) {
+        this.load = function (srcs) {
 			srcs = angular.isArray(srcs) ? srcs : srcs.split(/\s+/);
 			var self = this;
 			if(!promise){
 				promise = deferred.promise;
 			}
-      angular.forEach(srcs, function(src) {
-      	promise = promise.then( function(){
-      		return src.indexOf('.css') >=0 ? self.loadCSS(src) : self.loadScript(src);
-      	} );
-      });
-      deferred.resolve();
-      return promise;
+              angular.forEach(srcs, function(src) {
+      	        promise = promise.then( function(){
+      		        return src.indexOf('.css') >=0 ? self.loadCSS(src) : self.loadScript(src);
+      	        } );
+              });
+              deferred.resolve();
+              return promise;
 		}
 
 		/**

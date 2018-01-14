@@ -1,4 +1,4 @@
-<!-- list -->
+﻿<!-- list -->
 <ul class="nav">
   <li class="hidden-folded padder m-t m-b-sm text-muted text-xs">
     <span translate="aside.nav.HEADER">Navigation</span>
@@ -20,16 +20,22 @@
       </li>
       <li ui-sref-active="active">
         <a ui-sref="app.dashboard-v1">
-          <span>Dashboard v1</span>
+          <span>面板一</span>
         </a>
       </li>
       <li ui-sref-active="active">
         <a ui-sref="app.dashboard-v2">
           <b class="label bg-info pull-right">N</b>
-          <span>Dashboard v2</span>
+          <span>面板二</span>
         </a>
       </li>
     </ul>
+  </li>
+  <li ui-sref-active="active">
+    <a ui-sref="app.agentip">
+        <i class="glyphicon glyphicon-calendar icon text-info-dker"></i>
+        <span class="font-bold" translate="aside.nav.AGENTIP">IP池</span>
+    </a>
   </li>
   <li ui-sref-active="active">
     <a ui-sref="app.calendar">

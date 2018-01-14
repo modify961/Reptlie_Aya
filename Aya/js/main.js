@@ -1,15 +1,24 @@
+﻿/*
+*Javascript 严格模式use strict详解
+*ECMAscript 5添加的一种新的JS运行模式：这种模式使得Javascript在更严格的条件下运行。
+1、消除Javascript语法的一些不合理、不严谨之处，减少一些怪异行为;
+2、消除代码运行的一些不安全之处，保证代码运行的安全；
+3、提高编译器效率，增加运行速度；
+4、为未来新版本的Javascript做好铺垫。
+进入标记："use strict";
+*/
 'use strict';
 
 /* Controllers */
 
 angular.module('app')
   .controller('AppCtrl', ['$scope', '$translate', '$localStorage', '$window', 
-    function(              $scope,   $translate,   $localStorage,   $window ) {
+    function($scope,$translate,$localStorage,$window) {
       // add 'ie' classes to html
       var isIE = !!navigator.userAgent.match(/MSIE/i);
       isIE && angular.element($window.document.body).addClass('ie');
-      isSmartDevice( $window ) && angular.element($window.document.body).addClass('smart');
-
+      isSmartDevice($window) && angular.element($window.document.body).addClass('smart');
+      debugger
       // config
       $scope.app = {
         name: 'Angulr',
@@ -55,8 +64,9 @@ angular.module('app')
 
       // angular translate
       $scope.lang = { isopen: false };
-      $scope.langs = {en:'English', de_DE:'German', it_IT:'Italian'};
-      $scope.selectLang = $scope.langs[$translate.proposedLanguage()] || "English";
+      $scope.langs = { chn:'汉语'};
+      //$scope.selectLang = $scope.langs[$translate.proposedLanguage()] || "汉语";
+      $scope.selectLang =  "汉语";
       $scope.setLang = function(langKey, $event) {
         // set the current lang
         $scope.selectLang = $scope.langs[langKey];

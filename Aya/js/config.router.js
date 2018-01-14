@@ -1,7 +1,7 @@
-'use strict';
+﻿'use strict';
 
 /**
- * Config for the router
+ * 配置路由
  */
 angular.module('app')
   .run(
@@ -15,9 +15,8 @@ angular.module('app')
   .config(
     [          '$stateProvider', '$urlRouterProvider',
       function ($stateProvider,   $urlRouterProvider) {
-          
-          $urlRouterProvider
-              .otherwise('/app/dashboard-v1');
+          //使用路由没有匹配项目时使用otherwise来指定默认页
+          $urlRouterProvider.otherwise('/app/dashboard-v1');
           $stateProvider
               .state('app', {
                   abstract: true,
@@ -339,7 +338,10 @@ angular.module('app')
                   url: '/404',
                   templateUrl: 'tpl/page_404.html'
               })
-
+              .state('app.agentip', {
+                  url: '/agentip',
+                  templateUrl: 'tpl/app_agentip.html'
+              })
               // fullCalendar
               .state('app.calendar', {
                   url: '/calendar',

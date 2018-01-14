@@ -21,7 +21,7 @@ namespace Base.Common
             if (xmlPath.IndexOf(".xml") != -1)
             {
                 XElement xElement = XElement.Load(xmlPath);
-                var elements = from q in xElement.Elements("dll") select q;
+                var elements = from q in xElement.Elements("service") select q;
                 _routelist = RouteTable.Routes;
                 foreach (var item in elements)
                 {

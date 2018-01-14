@@ -7,7 +7,7 @@ using System.ServiceModel.Activation;
 using System.ServiceModel;
 using Base.Common.Error;
 
-namespace Base.Logic
+namespace Base.Logic.Basis
 {
     [AspNetCompatibilityRequirements(RequirementsMode = AspNetCompatibilityRequirementsMode.Allowed)]
     [ServiceBehavior(InstanceContextMode = InstanceContextMode.PerCall)] //对象在每次调用前创建，在调用后回收

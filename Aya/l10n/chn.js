@@ -17,11 +17,11 @@
         "nav" : {
             "HEADER" : "导航菜单",
                 "DASHBOARD" : "面板",
-                    "CALENDAR" : "日历",
-                        "AGENTIP":"IP池",
-                            "EMAIL" : "邮件",
-                                "WIDGETS" : "Widgets",
-                                    "components" : {
+                "CALENDAR" : "日历",
+                    "AGENTIP":"IP池",
+                        "EMAIL" : "邮件",
+                            "WIDGETS" : "Widgets",
+                                "components" : {
                 "COMPONENTS" : "Components",
                     "ui_kits" : {
                     "UI_KITS" : "UI Kits",
