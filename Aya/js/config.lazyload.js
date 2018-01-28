@@ -30,7 +30,7 @@ angular.module('app')
                           'vendor/jquery/wysiwyg/jquery.hotkeys.js'],
       dataTable:      ['vendor/jquery/datatables/jquery.dataTables.min.js',
                           'vendor/jquery/datatables/dataTables.bootstrap.js',
-                          'vendor/jquery/datatables/dataTables.bootstrap.css'],
+                            'vendor/jquery/datatables/dataTables.bootstrap.css'],
       vectorMap:      ['vendor/jquery/jvectormap/jquery-jvectormap.min.js', 
                           'vendor/jquery/jvectormap/jquery-jvectormap-world-mill-en.js',
                           'vendor/jquery/jvectormap/jquery-jvectormap-us-aea-en.js',

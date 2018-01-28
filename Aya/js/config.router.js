@@ -25,11 +25,11 @@ angular.module('app')
               })
               .state('app.dashboard-v1', {
                   url: '/dashboard-v1',
-                  templateUrl: 'tpl/app_dashboard_v1.html',
+                  templateUrl: 'tpl/index/index.html',
                   resolve: {
                     deps: ['$ocLazyLoad',
                       function( $ocLazyLoad ){
-                        return $ocLazyLoad.load(['js/controllers/chart.js']);
+                          return $ocLazyLoad.load(['js/controllers/chart.js','tpl/index/index.js']);
                     }]
                   }
               })
@@ -340,7 +340,14 @@ angular.module('app')
               })
               .state('app.agentip', {
                   url: '/agentip',
-                  templateUrl: 'tpl/app_agentip.html'
+                  templateUrl: 'tpl/agentList/app_agentip.html',
+                  resolve: {
+                      deps: ['$ocLazyLoad',
+                          function ($ocLazyLoad) {
+                              return $ocLazyLoad.load(['vendor/jquery/datatables/jquery.dataTables.min.js',
+                                  'vendor/jquery/datatables/dataTables.bootstrap.css','tpl/agentList/app_agentip.js']);
+                          }]
+                  }
               })
               // fullCalendar
               .state('app.calendar', {

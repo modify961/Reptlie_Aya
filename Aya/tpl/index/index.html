@@ -32,15 +32,15 @@
       </div>
     </div>
     <!-- / main header -->
-    <div class="wrapper-md" ng-controller="FlotChartDemoCtrl">
+    <div class="wrapper-md"  ng-controller="total_Info">
       <!-- stats -->
       <div class="row">
         <div class="col-md-5">
           <div class="row row-sm text-center">
             <div class="col-xs-6">
-              <div class="panel padder-v item">
-                <div class="h1 text-info font-thin h1">521</div>
-                <span class="text-muted text-xs">New items</span>
+              <div class="panel padder-v item" ng-click="test()">
+                <div id="agentIp_Count" class="h1 text-info font-thin h1">{{agentIp_Num}}</div>
+                <span class="text-muted text-xs">代理IP数</span>
                 <div class="top text-right w-full">
                   <i class="fa fa-caret-down text-warning m-r-sm"></i>
                 </div>
@@ -87,7 +87,7 @@
           </div>
         </div>
         <div class="col-md-7">
-          <div class="panel wrapper">
+          <div class="panel wrapper" ng-controller="FlotChartDemoCtrl">
             <label class="i-switch bg-warning pull-right" ng-init="showSpline=true">
               <input type="checkbox" ng-model="showSpline">
               <i></i>

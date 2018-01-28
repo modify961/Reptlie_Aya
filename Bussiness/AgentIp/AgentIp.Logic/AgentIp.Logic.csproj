@@ -58,6 +58,10 @@
       <Project>{437bb321-4a85-4a8d-9690-4d86b92e5545}</Project>
       <Name>Base.Logic</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\..\Aya.Data\MongDbHelper\MongHelp\MongHelp.csproj">
+      <Project>{a0626b25-d126-4eee-a324-740db24cfbe8}</Project>
+      <Name>MongHelp</Name>
+    </ProjectReference>
     <ProjectReference Include="..\AgentIp.Common\AgentIp.Common.csproj">
       <Project>{b106e7d1-6008-4686-b0be-08ee364439ed}</Project>
       <Name>AgentIp.Common</Name>

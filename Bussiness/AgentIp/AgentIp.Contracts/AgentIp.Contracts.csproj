@@ -48,6 +48,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\..\Aya.Base\Base.Entity\Base.Entity.csproj">
+      <Project>{03382430-cecd-4708-939b-7f78927de07b}</Project>
+      <Name>Base.Entity</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\..\Aya.Base\Base.Logic\Base.Logic.csproj">
       <Project>{437bb321-4a85-4a8d-9690-4d86b92e5545}</Project>
       <Name>Base.Logic</Name>

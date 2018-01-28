@@ -18,7 +18,6 @@ angular.module('app')
       var isIE = !!navigator.userAgent.match(/MSIE/i);
       isIE && angular.element($window.document.body).addClass('ie');
       isSmartDevice($window) && angular.element($window.document.body).addClass('smart');
-      debugger
       // config
       $scope.app = {
         name: 'Angulr',
