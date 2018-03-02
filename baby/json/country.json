@@ -1,0 +1,50 @@
+﻿[
+  {
+    "icon": "css/img/china.png",
+    "name": "中国"
+  },
+  {
+    "icon": "css/img/germany.png",
+    "name": "德国"
+  },
+  {
+    "icon": "css/img/new_zealand.png",
+    "name": "新西兰"
+  },
+  {
+    "icon": "css/img/usa.png",
+    "name": "美国"
+  },
+  {
+    "icon": "css/img/uk.png",
+    "name": "英国"
+  },
+  {
+    "icon": "css/img/france.png",
+    "name": "法国"
+  },
+  {
+    "icon": "css/img/australia.png",
+    "name": "澳大利亚"
+  },
+  {
+    "icon": "css/img/denmark.png",
+    "name": "丹麦"
+  },
+  {
+    "icon": "css/img/helan.png",
+    "name": "荷兰"
+  },
+  {
+    "icon": "css/img/switzerland.png",
+    "name": "瑞士"
+  },
+  {
+    "icon": "css/img/canada.png",
+    "name": "加拿大"
+  },
+  {
+    "icon": "css/img/sweden.png",
+    "name": "瑞典"
+  }
+]

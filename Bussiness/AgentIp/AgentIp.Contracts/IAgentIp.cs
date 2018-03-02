@@ -13,26 +13,51 @@ namespace AgentIp.Contracts
     [ServiceContract]
     public interface IAgentIp
     {
+        /// <summary>
+        /// 初始化页面
+        /// </summary>
+        /// <param name="context"></param>
+        /// <returns></returns>
         [WebInvoke(UriTemplate = "/init"
         , BodyStyle = WebMessageBodyStyle.WrappedRequest
         , ResponseFormat = WebMessageFormat.Json
         , RequestFormat = WebMessageFormat.Json)]
         Stream init(ImpContext context);
+        /// <summary>
+        /// 加载数据
+        /// </summary>
+        /// <param name="context"></param>
+        /// <returns></returns>
         [WebInvoke(UriTemplate = "/loadDate"
         , BodyStyle = WebMessageBodyStyle.WrappedRequest
         , ResponseFormat = WebMessageFormat.Json
         , RequestFormat = WebMessageFormat.Json)]
         Stream loadDate(ImpContext context);
+        /// <summary>
+        /// 删除
+        /// </summary>
+        /// <param name="context"></param>
+        /// <returns></returns>
         [WebInvoke(UriTemplate = "/delete"
         , BodyStyle = WebMessageBodyStyle.WrappedRequest
         , ResponseFormat = WebMessageFormat.Json
         , RequestFormat = WebMessageFormat.Json)]
         Stream delete(ImpContext context);
+        /// <summary>
+        /// 新增
+        /// </summary>
+        /// <param name="context"></param>
+        /// <returns></returns>
         [WebInvoke(UriTemplate = "/add"
         , BodyStyle = WebMessageBodyStyle.WrappedRequest
         , ResponseFormat = WebMessageFormat.Json
         , RequestFormat = WebMessageFormat.Json)]
         Stream add(ImpContext context);
+        /// <summary>
+        /// 更新
+        /// </summary>
+        /// <param name="context"></param>
+        /// <returns></returns>
         [WebInvoke(UriTemplate = "/update"
         , BodyStyle = WebMessageBodyStyle.WrappedRequest
         , ResponseFormat = WebMessageFormat.Json
