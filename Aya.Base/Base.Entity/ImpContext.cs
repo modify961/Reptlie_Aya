@@ -8,5 +8,9 @@ namespace Base.Entity
 {
     public class ImpContext
     {
+        /// <summary>
+        /// 自定义JSON格式数据
+        /// </summary>
+        public string json { get; set; }
     }
 }

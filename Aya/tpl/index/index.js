@@ -13,5 +13,6 @@
             $scope.agentIp_Num = data;
             $scope.$apply();
         })
+        
     }])
 })(jQuery)

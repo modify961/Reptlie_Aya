@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{67D21856-6E30-46B5-9EE6-FF6178F91B09}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AiKid.Logic</RootNamespace>
+    <AssemblyName>AiKid.Logic</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AikidWebService.cs" />
+    <Compile Include="BrandService.cs" />
+    <Compile Include="OnLineService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WaitUpService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Aya.Base\Base.Common\Base.Common.csproj">
+      <Project>{e01bf00b-4725-47a9-8da6-3ffbd87f3ec1}</Project>
+      <Name>Base.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Aya.Base\Base.Entity\Base.Entity.csproj">
+      <Project>{03382430-cecd-4708-939b-7f78927de07b}</Project>
+      <Name>Base.Entity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Aya.Base\Base.Logic\Base.Logic.csproj">
+      <Project>{437bb321-4a85-4a8d-9690-4d86b92e5545}</Project>
+      <Name>Base.Logic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Aya.Data\MongDbHelper\MongHelp\MongHelp.csproj">
+      <Project>{a0626b25-d126-4eee-a324-740db24cfbe8}</Project>
+      <Name>MongHelp</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AiKid.Common\AiKid.Common.csproj">
+      <Project>{804d6359-9d58-4599-86fd-e26caf07e67e}</Project>
+      <Name>AiKid.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AiKid.Contracts\AiKid.Contracts.csproj">
+      <Project>{01fb8e1d-423c-4ba4-a7aa-e5dd23d2acfe}</Project>
+      <Name>AiKid.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AiKid.Entity\AiKid.Entity.csproj">
+      <Project>{d0ad2904-f54b-48e2-bea7-1763a32a233e}</Project>
+      <Name>AiKid.Entity</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,41 +1,49 @@
 ﻿$(document).ready(function () {
-    var li = '<li>{0}</li>';
-    var cacheDate = null;
+    var span = '<span attr="{1}" class="brand css1">{0}</span>';
+    var data = { 'context': {} };
+    var brand = "";
+    var origin = "";
     $.ajax({
-        type: "GET",
-        url: "../json/brand.json",
+        type: "POST",
+        data: JSON.stringify(data),
+        url: "AikidWebService/obtainBrand",
         dataType: "json",
+        contentType: "application/json;charset=utf-8",
         success: function (data) {
-            cacheDate = data;
             $(data).each(function (_, flag) {
-                var item = " <option>" + flag.country+"</option>";
-                $(item).appendTo($("#country"));
-                $(flag.brand).each(function (i, n) {
-                    $('<option data-tokens="' + flag.country + '-' + n.name + '">' + flag.country + '-' + n.name + '</option>').appendTo($("#brand"));
-                })
+                var item = span.replace("{0}", flag.name).replace("{1}", flag.name);
+                $("#d_brand").append($(item));
+            })
+
+            $("#d_brand .css1").bind("click", function () {
+                $("#d_brand span").removeClass("brand_over");
+                $(this).addClass("brand_over");
+            })
+
+            $("#d_brand .css1").bind("click", function () {
+                brand = $(this).attr("attr");
+                if (brand == 0)
+                    brand = null;
+                searchInfo(brand, origin, 0);
+            })
+
+
+            $("#d_origin .css1").bind("click", function () {
+                $("#d_origin span").removeClass("brand_over");
+                $(this).addClass("brand_over");
+            })
+            $("#d_origin .css1").bind("click", function () {
+                origin = $(this).attr("attr");
+                if (origin == 0)
+                    origin = null;
+                searchInfo(brand, origin, 0);
             })
         }
     });
-    $("#country").change(function () {
-        var val = $("#country").val();
-        $("#brand").empty();
-        $(cacheDate).each(function (_, flag) {
-            if (flag.country == val && val!="全部") {
-                $(flag.brand).each(function (i, n) {
-                    $('<option data-tokens="' + flag.country + '-' + n.name + '">' + flag.country + '-' + n.name + '</option>').appendTo($("#brand"));
-                })
-            }
-            if (val == "全部") {
-                $(flag.brand).each(function (i, n) {
-                    $('<option data-tokens="' + flag.country + '-' + n.name + '">' + flag.country + '-' + n.name + '</option>').appendTo($("#brand"));
-                })
-            }
-        })
-    });
     var todyR = '<div class="featured-ad">'
-        + '<a href= "#" >'
+        + '<a href= "{4}" target="_blank" >'
         + '<div class="featured-ad-left">'
-        + '<img src="img/{0}" title="ad image" alt="" />'
+        + '<img src="{0}" title="{3}" alt="" />'
         + '</div>'
         + '<div class="featured-ad-right">'
         + '<h4>{1}</h4>'
@@ -43,86 +51,68 @@
         + '</div>'
         + '<div class="clearfix"></div></a ></div >';
     $.ajax({
-        type: "GET",
-        url: "../json/recommend.json",
+        type: "POST",
+        data: JSON.stringify(data),
+        url: "AikidWebService/obtainRecommend",
         dataType: "json",
+        contentType: "application/json;charset=utf-8",
         success: function (data) {
             var li = "<li >";
             $(data).each(function (_, flag) {
-                if (flag.top) {
-                    var item = todyR.replace("{2}", flag.price).replace("{1}", flag.remark)
-                        .replace("{0}", flag.img);
-                    $(item).appendTo($("#top_recommd"))
-                }
+                var item = todyR.replace("{2}", flag.price).replace("{1}", flag.title)
+                    .replace("{0}", flag.pictiue).replace("{3}", flag.title)
+                    .replace("{4}", flag.url);
+                $(item).appendTo($("#top_recommd"))
             })
         }
     });
     searchInfo();
 })
-function serchDetail() {
-    var contry = $("#country").val() == "全部" ? null : $("#country").val();
-    var brand = $("#brand").val() == "全部" ? null : $("#brand").val();
-    var amount = $("#amount").val();
-    var min = amount.split("-")[0].replace("$", "").trim();
-    var max = amount.split("-")[1].replace("$", "").trim();
-    searchInfo(contry, brand, min, max,1)
-}
-function searchInfo(contry,brand, min,max, current) {
-    var list = '<a href="#"><li>'
-        + '<img src="img/{1}" title="" alt="" />'
+function searchInfo(brand, origin, current) {
+    var detail = {
+        "brand": null,
+        "origin": null
+    };
+    var data = {
+        'context': {
+            "json": JSON.stringify(detail)
+        }
+    };
+    var list = '<a target="_blank" href="{6}"><li><div style="position:relative">'
+        + '<img  src="{1}" title="" alt=""><span class="price">{3}</span>'
         + '<section class="list-left">'
-        + '<h5 class="title">{2}</h5>'
-        + '<span class="adprice">{3}</span>'
-        + '<p class="catpath" ><a href="#">直接购买</a></p >'
+        + '<div style="font-size:12px;height:55px;color:#111" class="title">{2}</div>'
+        + '<div style="font-size:14px;color:red;width:100%;text-align:right" class="adprice">{5}</div>'
         + '</section>'
-        + '<section class="list-right">'
-        + '<span class="date">{4}</span>'
-        + '<span class="cityname">{5}</span>'
+        + ' <section class="list-right">'
         + '</section>'
-        + '<div class="clearfix"></div></li ></a >';
+        + '<div class="clearfix"></div></div></li ></a >';
     current = current || 1;
     var total = 0;
     $.ajax({
-        type: "GET",
-        url: "../json/list.json",
+        type: "POST",
+        data: JSON.stringify(data),
+        url: "AikidWebService/obtainBrandNo",
         dataType: "json",
+        contentType: "application/json;charset=utf-8",
         success: function (data) {
-            var cachtDate = [];
-            $(data).each(function (_, flag) {
-                var flags = true;
-                if (contry && contry != flag.countty)
-                    flags = false;
-                if (brand && brand != flag.brand)
-                    flags = false;
-                if (min && min < flag.price)
-                    flags = false;
-                if (max && max > flag.price)
-                    flags = false;
-                if (flags)
-                    cachtDate.push(flag);
-            });
-            var length = cachtDate.length;
-            total = parseInt(cachtDate.length / 6);
-            total = cachtDate.length % 6 == 0 ? total : (total + 1);
-            $("#paging").empty();
-            for (var i = 0; i < total; i++) {
-                if (current == (i + 1)) {
-                    $('<li><a href="javascript:void(0)" onclick="searchInfo(null,null,null,null,' + (i + 1) + ')">' + (i + 1) + '</a></li>').appendTo($("#paging"));
-                } else {
-                    $('<li><a  href="javascript:void(0)" onclick="searchInfo(null,null,null,null,' + (i + 1) + ')">' + (i + 1) + '</a></li>').appendTo($("#paging"));
-                }
-            }
-            var min = (current - 1)* 6;
-            var max = current * 6;
+            var cachtDate = data;
+            if (brand)
+                cachtDate = Enumerable.From(cachtDate)
+                    .Where(function (x) { return x.brand == brand })
+                    .ToArray();
+            if (origin)
+                cachtDate = Enumerable.From(cachtDate)
+                    .Where(function (x) { return x.origin == origin })
+                    .ToArray();
             $("#more_detail").empty();
-            debugger
             $(cachtDate).each(function (_, flag) {
-                if (_ >= min && _ < max) {
-                    var item = list.replace("{1}", flag.img).replace("{2}", flag.remark)
-                        .replace("{3}", flag.price).replace("{4}", flag.updateTime).replace("{5}", flag.form);
-                    $(item).appendTo($("#more_detail"));
-                }
+                var item = list.replace("{1}", flag.pictiue).replace("{2}", flag.title)
+                    .replace("{3}", flag.price).replace("{4}", flag.createDate).replace("{5}", flag.origin)
+                    .replace("{6}", flag.url);
+                $(item).appendTo($("#more_detail"));
             })
+
         }
     });
 }

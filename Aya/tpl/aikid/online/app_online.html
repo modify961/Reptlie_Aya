@@ -1,0 +1,85 @@
+﻿<div ng-controller="onLine_Ctrl">
+    <div class="wrapper-md">
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="table table-striped m-b-none">
+                    <table id="agentIpList" class="table table-striped m-b-none">
+                        <thead>
+                            <tr>
+                                <th style="width:30%">ID</th>
+                                <th style="width:40%">来源</th>
+                                <th style="width:30%">推荐</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="x in waitupData" style="cursor:pointer" ng-click="show('{{x._id}}')" >
+                                <td>{{x._id}}</td>
+                                <td>{{x.origin}}</td>
+                                <td><input type="checkbox" ng-model="x.recommend" required><i></i> 是</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="col-sm-8">
+                <form name="form-contact" class="form-validation">
+                    <div class="panel panel-default">
+                        <header class="panel-footer text-right bg-light lter">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-default" ng-click="addOnLine()">更新</button>
+                                <button type="button" class="btn btn-default" ng-click="moveOnLine()">下架</button>
+                                <button type="button" class="btn btn-default" ng-click="deleteOne()">删除</button>
+                            </div>  
+                        </header>
+                        <div class="panel-body">
+                            <div class="form-group">
+                                <label>标题</label>
+                                <input type="text" id="title" class="form-control"  ng-model="detail.title" required>
+                            </div>
+                            <div class="form-group pull-in clearfix">
+                                <div class="col-sm-6">
+                                    <label>是否推荐</label>
+                                    <label class="checkbox i-checks">
+                                        <input type="checkbox" ng-model="detail.recommend"  required><i></i> 是
+                                    </label>
+                                </div>
+                                <div class="col-sm-6">
+                                    <label>品牌</label>
+                                    <select ng-model="detail.brand" class="form-control m-t">
+                                        <option ng-repeat="x in brands" value="{{x.name}}">{{x.name}}</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group pull-in clearfix">
+                                <div class="col-sm-6">
+                                    <label>价格</label>
+                                    <input type="text" id="price" class="form-control" ng-model="detail.price" required>
+                                </div>
+                                <div class="col-sm-6">
+                                    <label>销售商</label>
+                                    <input type="text" id="origin" class="form-control" ng-model="detail.origin" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>标签</label>
+                                <input type="text" id="target" class="form-control" ng-model="detail.target" required>
+                            </div>
+                            <div class="form-group">
+                                <label>图片地址</label>
+                                <input type="url" id="pictiue" class="form-control" ng-model="detail.pictiue" placeholder="http://" required>
+                            </div>
+                            <div class="form-group">
+                                <label>链接地址</label>
+                                <input type="url" id="url" class="form-control"  ng-model="detail.url" placeholder="http://" required>
+                            </div>
+                            <div class="form-group">
+                                <label>备注</label>
+                                <textarea class="form-control" ng-model="detail.remark" rows="6"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

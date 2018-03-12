@@ -348,6 +348,36 @@ angular.module('app')
                                   'vendor/jquery/datatables/dataTables.bootstrap.css','tpl/agentList/app_agentip.js']);
                           }]
                   }
+              }).state('app.brand', {
+                  url: '/brand',
+                  templateUrl: 'tpl/aikid/brand/app_brand.html',
+                  resolve: {
+                      deps: ['$ocLazyLoad',
+                          function ($ocLazyLoad) {
+                              return $ocLazyLoad.load(['vendor/jquery/datatables/jquery.dataTables.min.js',
+                                  'vendor/jquery/datatables/dataTables.bootstrap.css', 'tpl/aikid/brand/app_brand.js']);
+                          }]
+                  }
+              }).state('app.waitup', {
+                  url: '/waitup',
+                  templateUrl: 'tpl/aikid/waitup/app_waitup.html',
+                  resolve: {
+                      deps: ['$ocLazyLoad',
+                          function ($ocLazyLoad) {
+                              return $ocLazyLoad.load(['vendor/jquery/datatables/jquery.dataTables.min.js',
+                                  'vendor/jquery/datatables/dataTables.bootstrap.css', 'tpl/aikid/waitup/app_waitup.js']);
+                          }]
+                  }
+              }).state('app.online', {
+                  url: '/online',
+                  templateUrl: 'tpl/aikid/online/app_online.html',
+                  resolve: {
+                      deps: ['$ocLazyLoad',
+                          function ($ocLazyLoad) {
+                              return $ocLazyLoad.load(['vendor/jquery/datatables/jquery.dataTables.min.js',
+                                  'vendor/jquery/datatables/dataTables.bootstrap.css', 'tpl/aikid/online/app_online.js']);
+                          }]
+                  }
               })
               // fullCalendar
               .state('app.calendar', {

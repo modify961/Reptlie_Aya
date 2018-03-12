@@ -1,72 +1,16 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-    <title>爱孩子360-首页</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/bootstrap-select.css">
-    <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
-    <link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" />
-    <link rel="stylesheet" href="css/font-awesome.min.css" />
-    <!-- for-mobile-apps -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>爱孩子360-详细列表</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="keywords" content="Resale Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
-Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony Ericsson, Motorola web design" />
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <link rel="stylesheet" type="text/css" href="css/jquery-ui1.css">
     <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
-    <!-- //for-mobile-apps -->
-    <!--fonts-->
-    <link href='https://fonts.googleapis.com/css?family=Ubuntu+Condensed' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
-    <!--//fonts-->
-    <!-- js -->
     <script type="text/javascript" src="js/jquery.min.js"></script>
-    <!-- js -->
+    <script src="js/linq.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script src="js/bootstrap-select.js"></script>
-    <script src="plugin/index.js"></script>
-    <script type="text/javascript" src="js/jquery.flexisel.js"></script>
-    <script>
-        $(document).ready(function () {
-            var mySelect = $('#first-disabled2');
-
-            $('#special').on('click', function () {
-                mySelect.find('option:selected').prop('disabled', true);
-                mySelect.selectpicker('refresh');
-            });
-
-            $('#special2').on('click', function () {
-                mySelect.find('option:disabled').prop('disabled', false);
-                mySelect.selectpicker('refresh');
-            });
-
-            $('#basic2').selectpicker({
-                liveSearch: true,
-                maxOptions: 1
-            });
-        });
-    </script>
-    <script type="text/javascript" src="js/jquery.leanModal.min.js"></script>
-    <link href="css/jquery.uls.css" rel="stylesheet" />
-    <link href="css/jquery.uls.grid.css" rel="stylesheet" />
-    <link href="css/jquery.uls.lcd.css" rel="stylesheet" />
-    <!-- Source -->
-    <script src="js/jquery.uls.data.js"></script>
-    <script src="js/jquery.uls.data.utils.js"></script>
-    <script src="js/jquery.uls.lcd.js"></script>
-    <script src="js/jquery.uls.languagefilter.js"></script>
-    <script src="js/jquery.uls.regionfilter.js"></script>
-    <script src="js/jquery.uls.core.js"></script>
-    <script>
-        $(document).ready(function () {
-            $('.uls-trigger').uls({
-                onSelect: function (language) {
-                    var languageName = $.uls.data.getAutonym(language);
-                    $('.uls-trigger').text(languageName);
-                },
-                quickList: ['en', 'hi', 'he', 'ml', 'ta', 'fr'] //FIXME
-            });
-        });
-    </script>
+    <script src="plugin/details.js"></script>
     <style type="text/css">
         .displays {
             display: none
@@ -76,99 +20,77 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             font-size: 30px;
             color: #fff
         }
+
+        .brand {
+            cursor: pointer;
+            margin-left: 10px;
+            padding-left: 5px;
+            padding-right: 10px;
+        }
+
+        .brand_over {
+            border: 1px dashed #808080;
+        }
     </style>
 </head>
 <body>
-    <div class="header" style="background-color:antiquewhite">
+    <div class="header" style="background-color:#1b1e24">
         <div class="container">
             <div class="logo">
-                <a href="index.html"><span>Ai</span>Kid360</a>
+                <a href="index.html" style="font-size:28px"><span>Ai</span>Kid360</a>
             </div>
             <div class="header-right displays">
-                <a class="account" href="login.html">My Account</a>
-                <span class="active uls-trigger">Select language</span>
-                <!-- Large modal -->
-                <div class="selectregion">
-                    <button class="btn btn-primary" data-toggle="modal" data-target="#myModal">
-                        选择您所在的区域
-                    </button>
-                    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
-                         aria-hidden="true">
-                        <div class="modal-dialog modal-lg">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
-                                        &times;
-                                    </button>
-                                    <h4 class="modal-title" id="myModalLabel">
-                                        选择您所在的位置
-                                    </h4>
-                                </div>
-                                <div class="modal-body">
-                                    <form class="form-horizontal" role="form">
-                                        <div class="form-group">
-                                            <select id="basic2" class="show-tick form-control" multiple>
-                                                <optgroup label="Popular Cities">
-                                                    <option selected style="display:none;color:#eee;">选择城市</option>
-                                                    <option>济南</option>
-                                                </optgroup>
-                                                <optgroup label="更多城市">
-                                                    <optgroup label="山东">
-                                                        <option>济南</option>
-                                                        <option>烟台</option>
-                                                        <option>青岛</option>
-                                                        <option>菏泽</option>
-                                                        <option>日照</option>
-                                                    </optgroup>
-                                                </optgroup>
-                                            </select>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <script>
-				$('#myModal').modal('');
-                    </script>
-                </div>
             </div>
         </div>
     </div>
-    <!-- content-starts-here -->
-    <div class="content">
-        <div class="categories">
-            <div class="container" id="container">
 
+
+    <!-- Mobiles -->
+    <div class="total-ads main-grid-border">
+        <div class="container">
+            <div class="breadcrumb" style="margin-bottom: 5px; margin-top:10px;border:1px solid #CCCCCC;">
+                <div id="d_brand"><span class="brand">品&nbsp;&nbsp;&nbsp;&nbsp;牌:</span><span attr="0" class="brand css1">全部</span></div>
+                <div id="d_origin" style="padding-top:15px"><span class="brand">销售商:</span><span attr="0" class="brand css1">全部</span><span attr="亚马逊" class="brand css1">亚马逊</span><span attr="京东" class="brand css1">京东</span><span attr="苏宁" class="brand css1">苏宁</span><span attr="天猫" class="brand css1">天猫</span><span attr="淘宝" class="brand css1">淘宝</span></div>
+            </div>
+            <div class="ads-grid">
+                <div class="side-bar col-md-3" style="display:none">
+                    <div class="featured-ads">
+                        <h2 class="sear-head fer">今日推荐</h2>
+                        <div id="top_recommd">
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+                <div class="ads-display col-md-12" style="padding:0px; border:1px solid #CCCCCC; border-radius:4px">
+                    <div id="container">
+                        <ul class="grid" id="more_detail"></ul>
+                    </div>
+                </div>
                 <div class="clearfix"></div>
             </div>
         </div>
-        <div class="trending-ads">
-            <div class="container">
-                <!-- slider -->
-                <div class="trend-ads">
-                    <h2>今日优惠</h2>
-                    <ul id="flexiselDemo3"></ul>
-
-                </div>
-            </div>
-            <!-- //slider -->
-        </div>
     </div>
+    <!-- // Mobiles -->
     <!--footer section start-->
     <footer>
-        <div class="footer-top">
+        <div class="footer-top" style="padding-top:10px">
             <div class="container">
                 <div class="foo-grids">
                     <div class="col-md-3 footer-grid"></div>
-                    <div class="col-md-3 footer-grid">
-                        <h4 class="footer-head">微信公众号</h4>
+                    <div class="col-md-2 footer-grid">
+                        <h4 class="footer-head" style="font-size:18px">官方微博</h4>
                         <div>
-                            <img width="180" height="180" src="css/img/aikid360.jpg" />
+                            <img width="80" height="80" src="css/img/aikid360.jpg" />
+                        </div>
+                    </div>
+                    <div class="col-md-2 footer-grid">
+                        <h4 class="footer-head" style="font-size:18px">公众号</h4>
+                        <div>
+                            <img width="80" height="80" src="css/img/aikid360.jpg" />
                         </div>
                     </div>
                     <div class="col-md-3 footer-grid">
-                        <h4 class="footer-head">联系我们</h4>
+                        <h4 class="footer-head" style="font-size:18px">联系我们</h4>
                         <div>
                             <address>
                                 <ul class="location"></ul>
@@ -182,25 +104,15 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                     <li>邮箱：<a href="mailto:aikid360@126.com">aikid360@126.com</a></li>
                                     <div class="clearfix"></div>
                                 </ul>
-
                             </address>
                         </div>
-                        <div class="col-md-3 footer-grid"></div>
                         <div class="clearfix"></div>
                     </div>
+                    <div class="col-md-2 footer-grid"></div>
                 </div>
             </div>
-            <div class="footer-bottom text-center">
-                <div class="container">
-                    <div class="footer-logo">
-                        <a href="index.html"><span>Ai</span>Kid360</a>
-                    </div>
-                    <div class="copyrights">
-                        <p>Copyright &copy; </p>
-                    </div>
-                    <div class="clearfix"></div>
-                </div>
-            </div>
+           
+        </div>
     </footer>
     <!--footer section end-->
 </body>

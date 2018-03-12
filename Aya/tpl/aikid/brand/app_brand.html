@@ -1,0 +1,62 @@
+﻿<div ng-controller="country_Ctrl">
+    <div class="wrapper-md">
+        <div class="row" ng-show="showList">
+            <div class="col-sm-12">
+                <header class="panel-footer text-right bg-light lter">
+                    <button class="btn btn-success" ng-click="add()">新增品牌</button>
+                </header>
+                <table id="agentIpList" class="table table-striped m-b-none">
+                    <thead>
+                        <tr>
+                            <th style="width:20%">名称</th>
+                            <th style="width:20%">英文名称</th>
+                            <th style="width:30%">国家</th>
+                            <td style="width:30%">操作</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="x in brands" style="cursor:pointer" >
+                            <td>{{x.name}}</td>
+                            <td>{{x.englishName}}</td>
+                            <td>{{x.conutry}}</td>
+                            <td><button class="btn m-b-xs w-xs btn-primary" ng-click="edit('{{x}}')">编辑</button>  &nbsp;&nbsp;&nbsp; <button class="btn m-b-xs w-xs btn-warning"  ng-click="deleteOne('{{x}}')">删除</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="row" ng-hide="showList">
+            <div class="col-sm-12">
+                <header class="panel-footer text-right bg-light lter">
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-default" ng-click="addOne()">保存</button>
+                        <button type="button" class="btn btn-default" ng-click="deleteOne()" >删除</button>
+                        <button type="button" class="btn btn-default" ng-click="back()">返回</button>
+                    </div>  
+                </header>
+                <form name="form-contact" class="form-validation">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <div class="form-group">
+                                <label>名称</label>
+                                <input type="text" id="name" class="form-control" ng-model="detail.name" required>
+                            </div>
+                            <div class="form-group">
+                                <label>所属国家</label>
+                                <input type="text" id="country" class="form-control" ng-model="detail.conutry" required>
+                            </div>
+                            <div class="form-group">
+                                <label>英文名称</label>
+                                <input type="text" id="pictiue" class="form-control"  ng-model="detail.englishName" required>
+                            </div>
+                            <div class="form-group">
+                                <label>备注</label>
+                                <textarea class="form-control" rows="6" ng-model="detail.remark" ></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

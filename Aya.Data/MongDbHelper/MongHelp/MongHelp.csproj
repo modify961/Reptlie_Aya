@@ -62,6 +62,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Agenter.cs" />
+    <Compile Include="AiKid\Helper\MongBrand.cs" />
+    <Compile Include="AiKid\Helper\MongCountry.cs" />
+    <Compile Include="AiKid\Helper\MongOnLine.cs" />
+    <Compile Include="AiKid\Model\BrandModel.cs" />
+    <Compile Include="AiKid\Model\CountryModel.cs" />
+    <Compile Include="AiKid\Helper\MongWaitUp.cs" />
+    <Compile Include="AiKid\Model\OnLineModel.cs" />
+    <Compile Include="AiKid\Model\WaitUpModel.cs" />
     <Compile Include="MongAgentIp.cs" />
     <Compile Include="MongBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

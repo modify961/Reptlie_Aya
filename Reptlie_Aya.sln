@@ -6,7 +6,7 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Aya", "Aya\", "{5B6714BA-E1E0-4D25-820B-3B4087165CD2}"
 	ProjectSection(WebsiteProperties) = preProject
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
-		ProjectReferences = "{e01bf00b-4725-47a9-8da6-3ffbd87f3ec1}|Base.Common.dll;{03382430-CECD-4708-939B-7F78927DE07B}|Base.Entity.dll;{defa0059-4efc-4306-8ef6-a541ab5a1432}|AgentIp.Logic.dll;{B106E7D1-6008-4686-B0BE-08EE364439ED}|AgentIp.Common.dll;{3238BACC-6599-48B7-82F1-D309A999ADA1}|AgentIp.Contracts.dll;{DF66FE93-66E6-4E56-AFD8-0C1045B8574E}|AgentIp.Entity.dll;{437BB321-4A85-4A8D-9690-4D86B92E5545}|Base.Logic.dll;{A0626B25-D126-4EEE-A324-740DB24CFBE8}|MongHelp.dll;"
+		ProjectReferences = "{e01bf00b-4725-47a9-8da6-3ffbd87f3ec1}|Base.Common.dll;{03382430-CECD-4708-939B-7F78927DE07B}|Base.Entity.dll;{defa0059-4efc-4306-8ef6-a541ab5a1432}|AgentIp.Logic.dll;{B106E7D1-6008-4686-B0BE-08EE364439ED}|AgentIp.Common.dll;{3238BACC-6599-48B7-82F1-D309A999ADA1}|AgentIp.Contracts.dll;{DF66FE93-66E6-4E56-AFD8-0C1045B8574E}|AgentIp.Entity.dll;{437BB321-4A85-4A8D-9690-4D86B92E5545}|Base.Logic.dll;{A0626B25-D126-4EEE-A324-740DB24CFBE8}|MongHelp.dll;{804d6359-9d58-4599-86fd-e26caf07e67e}|AiKid.Common.dll;{D0AD2904-F54B-48E2-BEA7-1763A32A233E}|AiKid.Entity.dll;{01fb8e1d-423c-4ba4-a7aa-e5dd23d2acfe}|AiKid.Contracts.dll;{67d21856-6e30-46b5-9ee6-ff6178f91b09}|AiKid.Logic.dll;"
 		Debug.AspNetCompiler.VirtualPath = "/localhost_53391"
 		Debug.AspNetCompiler.PhysicalPath = "Aya\"
 		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_53391\"
@@ -57,7 +57,7 @@ EndProject
 Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "baby", "baby\", "{2FD74610-DE07-4F9C-B982-65F04155E5ED}"
 	ProjectSection(WebsiteProperties) = preProject
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.6.1"
-		ProjectReferences = "{b106e7d1-6008-4686-b0be-08ee364439ed}|AgentIp.Common.dll;{3238bacc-6599-48b7-82f1-d309a999ada1}|AgentIp.Contracts.dll;{DF66FE93-66E6-4E56-AFD8-0C1045B8574E}|AgentIp.Entity.dll;{03382430-CECD-4708-939B-7F78927DE07B}|Base.Entity.dll;{437BB321-4A85-4A8D-9690-4D86B92E5545}|Base.Logic.dll;{E01BF00B-4725-47A9-8DA6-3FFBD87F3EC1}|Base.Common.dll;"
+		ProjectReferences = "{b106e7d1-6008-4686-b0be-08ee364439ed}|AgentIp.Common.dll;{3238bacc-6599-48b7-82f1-d309a999ada1}|AgentIp.Contracts.dll;{DF66FE93-66E6-4E56-AFD8-0C1045B8574E}|AgentIp.Entity.dll;{03382430-CECD-4708-939B-7F78927DE07B}|Base.Entity.dll;{437BB321-4A85-4A8D-9690-4D86B92E5545}|Base.Logic.dll;{E01BF00B-4725-47A9-8DA6-3FFBD87F3EC1}|Base.Common.dll;{67d21856-6e30-46b5-9ee6-ff6178f91b09}|AiKid.Logic.dll;{804D6359-9D58-4599-86FD-E26CAF07E67E}|AiKid.Common.dll;{01FB8E1D-423C-4BA4-A7AA-E5DD23D2ACFE}|AiKid.Contracts.dll;{D0AD2904-F54B-48E2-BEA7-1763A32A233E}|AiKid.Entity.dll;{A0626B25-D126-4EEE-A324-740DB24CFBE8}|MongHelp.dll;"
 		Debug.AspNetCompiler.VirtualPath = "/localhost_59481"
 		Debug.AspNetCompiler.PhysicalPath = "baby\"
 		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_59481\"
@@ -73,8 +73,19 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "baby", "baby\", "{2FD74610-
 		Release.AspNetCompiler.FixedNames = "false"
 		Release.AspNetCompiler.Debug = "False"
 		VWDPort = "59481"
+		SlnRelativePath = "baby\"
 		DefaultWebSiteLanguage = "Visual C#"
 	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AiKid", "AiKid", "{18C89511-E49E-483D-A58C-3942D0FE5609}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AiKid.Common", "Bussiness\AiKid\AiKid.Common\AiKid.Common.csproj", "{804D6359-9D58-4599-86FD-E26CAF07E67E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AiKid.Contracts", "Bussiness\AiKid\AiKid.Contracts\AiKid.Contracts.csproj", "{01FB8E1D-423C-4BA4-A7AA-E5DD23D2ACFE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AiKid.Entity", "Bussiness\AiKid\AiKid.Entity\AiKid.Entity.csproj", "{D0AD2904-F54B-48E2-BEA7-1763A32A233E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AiKid.Logic", "Bussiness\AiKid\AiKid.Logic\AiKid.Logic.csproj", "{67D21856-6E30-46B5-9EE6-FF6178F91B09}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -122,6 +133,22 @@ Global
 		{2FD74610-DE07-4F9C-B982-65F04155E5ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2FD74610-DE07-4F9C-B982-65F04155E5ED}.Release|Any CPU.ActiveCfg = Debug|Any CPU
 		{2FD74610-DE07-4F9C-B982-65F04155E5ED}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{804D6359-9D58-4599-86FD-E26CAF07E67E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{804D6359-9D58-4599-86FD-E26CAF07E67E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{804D6359-9D58-4599-86FD-E26CAF07E67E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{804D6359-9D58-4599-86FD-E26CAF07E67E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{01FB8E1D-423C-4BA4-A7AA-E5DD23D2ACFE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01FB8E1D-423C-4BA4-A7AA-E5DD23D2ACFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01FB8E1D-423C-4BA4-A7AA-E5DD23D2ACFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01FB8E1D-423C-4BA4-A7AA-E5DD23D2ACFE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D0AD2904-F54B-48E2-BEA7-1763A32A233E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0AD2904-F54B-48E2-BEA7-1763A32A233E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D0AD2904-F54B-48E2-BEA7-1763A32A233E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D0AD2904-F54B-48E2-BEA7-1763A32A233E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{67D21856-6E30-46B5-9EE6-FF6178F91B09}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67D21856-6E30-46B5-9EE6-FF6178F91B09}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67D21856-6E30-46B5-9EE6-FF6178F91B09}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{67D21856-6E30-46B5-9EE6-FF6178F91B09}.Release|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -138,6 +165,11 @@ Global
 		{DF66FE93-66E6-4E56-AFD8-0C1045B8574E} = {487DC0BE-A2C5-4433-960E-734C12FB61E9}
 		{DEFA0059-4EFC-4306-8EF6-A541AB5A1432} = {487DC0BE-A2C5-4433-960E-734C12FB61E9}
 		{A0626B25-D126-4EEE-A324-740DB24CFBE8} = {BEE6B09A-4334-4FEE-9CAE-82444853E271}
+		{18C89511-E49E-483D-A58C-3942D0FE5609} = {5AAD320C-CD93-47FA-9BDC-A0B1AF77898F}
+		{804D6359-9D58-4599-86FD-E26CAF07E67E} = {18C89511-E49E-483D-A58C-3942D0FE5609}
+		{01FB8E1D-423C-4BA4-A7AA-E5DD23D2ACFE} = {18C89511-E49E-483D-A58C-3942D0FE5609}
+		{D0AD2904-F54B-48E2-BEA7-1763A32A233E} = {18C89511-E49E-483D-A58C-3942D0FE5609}
+		{67D21856-6E30-46B5-9EE6-FF6178F91B09} = {18C89511-E49E-483D-A58C-3942D0FE5609}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D7D5747A-9725-411E-AB8F-59274DB0879A}

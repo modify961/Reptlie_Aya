@@ -19,9 +19,13 @@
                 "DASHBOARD" : "面板",
                     "CALENDAR" : "日历",
                         "AGENTIP":"IP池",
-                            "EMAIL" : "邮件",
-                                "WIDGETS" : "Widgets",
-                                    "components" : {
+                        "AIKID":"爱孩子",
+                                "COUNTRY":"品牌",
+                            "WAITUP":"待上线数据",
+                                    "ONLINE":"线上数据",
+                                    "EMAIL" : "邮件",
+                                        "WIDGETS" : "Widgets",
+                                            "components" : {
                 "COMPONENTS" : "Components",
                     "ui_kits" : {
                     "UI_KITS" : "UI Kits",

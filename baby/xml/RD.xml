@@ -1,5 +1,4 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <services>
-  <service className="AgentIp.Logic" serverver="1.0" subSystem="AgentIp"/>
   <service className="AiKid.Logic" serverver="1.0" subSystem="AiKid"/>
 </services>

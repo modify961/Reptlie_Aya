@@ -883,22 +883,23 @@ ul#flexiselDemo3.nbs-flexisel-nav-left, ul#flexiselDemo3.nbs-flexisel-nav-right 
 }
 span.price {
     background-color: rgba(89, 194, 175, 0.79);
-    color: #FFF;
+    color: #111;
     display: block;
-    font-size: 16px;
-    padding: 7px 15px;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 7px 7px;
     position: absolute;
-    right: 10px;
+    right: 0px;
     text-align: right;
-    top: 5px;
+    top: 0px;
     z-index: 2;
     line-height: 1;
-	letter-spacing: 3px;
-    transition:0.5s all;
-	-webkit-transition:0.5s all;
-	-moz-transition:0.5s all;
-	-o-transition:0.5s all;
-	-ms-transition:0.5s all;
+    letter-spacing: 3px;
+    transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    -ms-transition: 0.5s all;
 }
 .biseller-column:hover span.price{
 	background:rgba(243, 197, 0, 0.79);
@@ -2747,13 +2748,13 @@ span.cityname{
 /* GRID VIEW */
 #container .grid li {
     float: left;
-    width: 29.333%;
+    width: 14%;
     box-shadow: 0 0 0.6em #ccc;
     -webkit-box-shadow: 0 0 0.3em #E4E4E4;
     -o-box-shadow: 0 0 0.3em #E4E4E4;
     -moz-box-shadow: 0 0 0.3em #E4E4E4;
     -ms-box-shadow: 0 0 0.3em #E4E4E4;
-    margin: 2%;
+    margin: 1.1%;
     background: #F7F7F7;
     list-style-type: none;
 }
@@ -3993,7 +3994,7 @@ label {
 	span.price {
 		font-size: 14px;
 		padding: 7px 12px;
-		position: absolute;
+		position: relative;
 		letter-spacing: 1px;
 	}
 	.col-md-3.biseller-column {
