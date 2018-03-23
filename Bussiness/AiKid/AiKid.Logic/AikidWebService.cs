@@ -12,6 +12,7 @@ using AiKid.Common;
 using Enpower.Services.Common;
 using MongHelp.AiKid.Model;
 using Newtonsoft.Json;
+using System.Web;
 
 namespace AiKid.Logic
 {
@@ -20,6 +21,31 @@ namespace AiKid.Logic
     /// </summary>
     public class AikidWebService : FoundationServer, IAikidWeb
     {
+        /// <summary>
+        /// 根据ID获取数据
+        /// </summary>
+        /// <param name="context"></param>
+        /// <returns></returns>
+        public Stream obtainDetail(ImpContext context)
+        {
+            //记录访问IP
+            string ip = HttpContext.Current.Request.ServerVariables["REMOTE_ADDR"].ToString();
+
+            string id = context.json;
+            if (!string.IsNullOrEmpty(id)) {
+                MongOnLine mongOnLine = new MongOnLine(Constants.daname);
+                List<OnLineModel> list = mongOnLine.obtainAll(new OnLineModel());
+                var p = (from q in list where q.guid == id select q).FirstOrDefault();
+                if (p != null)
+                {
+                    int num = p.clickN + 1;
+                    mongOnLine.updateClick(id, num);
+                    return new ToStream().ToStreams(p);
+                }
+                return null;
+            }
+            return new ToStream().ToStreams("");
+        }
         /// <summary>
         /// 获取所有的品牌数据
         /// </summary>
@@ -48,6 +74,8 @@ namespace AiKid.Logic
             list = (from q in list orderby q.createDate  descending select q).ToList();
             return new ToStream().ToStreams(list);
         }
+
+        
 
         /// <summary>
         /// 查询所有的推荐数据

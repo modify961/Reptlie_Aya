@@ -58,5 +58,13 @@ namespace MongHelp.AiKid.Helper
             IMongoQuery query = Query.EQ(name, val);
             _mongoCollection.Remove(query);
         }
+        /// <summary>
+        /// 删除全部数据
+        /// </summary>
+        /// <param name="agenter"></param>
+        public void delete()
+        {
+            _mongoCollection.RemoveAll();
+        }
     }
 }

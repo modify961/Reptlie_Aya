@@ -94,8 +94,8 @@ namespace AiKid.Logic
                 FileInfo file = new FileInfo(pic);
                 if(file.Exists)
                     asy.Add("pic", file);
-                string content = string.Format("小编给您推荐：{0} <br /> 优惠商：{1} <br />  详情请点击链接查看：http://www.aikid360.com&guid={2}",
-                    onLineModel.title, onLineModel.origin, onLineModel.guid);
+                string content = string.Format("{0}  详情请点击链接查看：https://www.aikid360.com/view.htm?{2}",
+                    onLineModel.remark, onLineModel.origin, onLineModel.guid);
                 asy.Add("status", content);
                 weiBoHelper.send(asy);
                 return new ToStream().ToStreams(mongWaitUp.obtainAll());
@@ -124,6 +124,10 @@ namespace AiKid.Logic
                 ReferenceLoopHandling = ReferenceLoopHandling.Ignore
             });
             mongOnLine.delete(onLineModel);
+            string pic = onLineModel.pictiue.Replace("https://www.aikid360.com:8010/", "");
+            pic = string.Format("{0}{1}", @"C:\web\akidImg\", pic);
+            if (File.Exists(pic))
+                File.Delete(pic);
             //重新保存数据
             saveOnLine();
             return new ToStream().ToStreams(mongOnLine.obtainAll());

@@ -38,6 +38,10 @@ namespace MongHelp.AiKid.Model
         /// </summary>
         public string remark { get; set; }
         /// <summary>
+        /// 段位
+        /// </summary>
+        public string san { get; set; }
+        /// <summary>
         /// 图片地址
         /// </summary>
         public string pictiue { get; set; }

@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="">
+        var url = window.location.href;
+        var sp = url.split("?");
+        if (sp.length == 2)
+            sp = sp[1];
+        else
+            window.location.href = "https://www.aikid360.com/";
+        var data = {
+            'context': {
+                "json": sp
+            }
+        };
+        $.ajax({
+            type: "POST",
+            data: JSON.stringify(data),
+            url: "AikidWebService/obtainDetail",
+            dataType: "json",
+            contentType: "application/json;charset=utf-8",
+            success: function (data) {
+                if (data && data.url) {
+                    window.location.href = data.url;
+                }
+            }
+        });
+    </script>
+</head>
+<body>
+</body>
+</html>

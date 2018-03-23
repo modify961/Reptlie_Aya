@@ -1,5 +1,5 @@
 ﻿(function ($) {
-    app.controller('waitUp_Ctrl', ['$scope', function ($scope) {
+    app.controller('waitUp_Ctrl', ['$scope', function ($scope, $rootScope, $modal) {
         $scope.title = "待上线奶粉数据";
         $scope.waitupData = null;
         $scope.brands = null;
@@ -11,6 +11,15 @@
                     $scope.detail = flag;
                     if ($scope.detail.pictiue.indexOf("aikid360.com:8010")==-1)
                         $scope.detail.pictiue = "https://www.aikid360.com:8010/" + $scope.detail.pictiue;
+                    //判断奶粉的段位
+                    if (flag.title.indexOf("一段") != -1 || flag.title.indexOf("1段") != -1)
+                        $scope.detail.san = "一段";
+                    if (flag.title.indexOf("二段") != -1 || flag.title.indexOf("2段") != -1)
+                        $scope.detail.san = "二段";
+                    if (flag.title.indexOf("三段") != -1 || flag.title.indexOf("3段") != -1)
+                        $scope.detail.san = "三段";
+                    if (flag.title.indexOf("四段") != -1 || flag.title.indexOf("4段") != -1)
+                        $scope.detail.san = "四段";
                     //从title中筛选出品牌信息
                     angular.forEach($scope.brands, function (brand, _) {
                         if (flag.title.indexOf(brand.name) != -1)
@@ -100,5 +109,19 @@
             $scope.$apply();
         })
     }])
+
+
+    //模态框对应的Controller
+    app.controller('modalCtrl', function ($scope, $modalInstance, data) {
+        $scope.data = data;
+
+        //在这里处理要进行的操作
+        $scope.ok = function () {
+            $modalInstance.close();
+        };
+        $scope.cancel = function () {
+            $modalInstance.dismiss('cancel');
+        }
+    });
 })(jQuery)
 

@@ -49,6 +49,10 @@ namespace MongHelp.AiKid.Model
         /// </summary>
         public string url { get; set; }
         /// <summary>
+        /// 段位
+        /// </summary>
+        public string san { get; set; }
+        /// <summary>
         /// 是否做为推荐项
         /// </summary>
         public bool recommend { get; set; }

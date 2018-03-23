@@ -44,6 +44,7 @@
   <ItemGroup>
     <Compile Include="IAikidWeb.cs" />
     <Compile Include="IBrand.cs" />
+    <Compile Include="IEtcTool.cs" />
     <Compile Include="IOnLine.cs" />
     <Compile Include="IWaitUp.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

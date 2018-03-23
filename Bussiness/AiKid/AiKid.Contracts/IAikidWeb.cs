@@ -43,5 +43,15 @@ namespace AiKid.Contracts
         , ResponseFormat = WebMessageFormat.Json
         , RequestFormat = WebMessageFormat.Json)]
         Stream obtainBrandNo(ImpContext context);
+        /// <summary>
+        /// 根据ID获取详细信息
+        /// </summary>
+        /// <param name="context"></param>
+        /// <returns></returns>
+        [WebInvoke(UriTemplate = "/obtainDetail"
+        , BodyStyle = WebMessageBodyStyle.WrappedRequest
+        , ResponseFormat = WebMessageFormat.Json
+        , RequestFormat = WebMessageFormat.Json)]
+        Stream obtainDetail(ImpContext context);
     }
 }

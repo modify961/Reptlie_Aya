@@ -1,8 +1,11 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-    <title>爱孩子360-详细列表</title>
+    <title>爱孩子360-爱永远不打折</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="婴幼儿,一段,二段,三段,四段,奶粉,优惠,折扣" />
+    <meta name="description" content="每日推荐最新的婴幼儿奶粉，衣服，玩具优惠信息" />
+    <meta name="author" content="www.aikid360.com" />
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
     <link rel="stylesheet" type="text/css" href="css/jquery-ui1.css">
@@ -31,9 +34,37 @@
         .brand_over {
             border: 1px dashed #808080;
         }
+        /*客服样式*/
+        li {
+            list-style-type: none;
+        }
+
+        #haiiskefu {
+            width: 112px;
+            position: fixed;
+            left: 5px;
+            top: 50%;
+            margin-top: -280px;
+            z-index: 999;
+        }
+
+            #haiiskefu ul li a {
+                width: 80px;
+                height: 100px;
+                display: block;
+                margin-bottom: 1px;
+                background: #fff;
+            }
     </style>
 </head>
 <body>
+    <div id="haiiskefu">
+        <ul>
+            <li><a rel="nofollow" href="#" title="微博" style="padding-left:5px" ><img width="70" height="70"src="css/img/weibo.png" /><span  style="padding-top:5px" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;微博</span></a></li>
+            <li><a rel="nofollow" href="#" title="公众号" ><img width="80" height="80" src="css/img/aikid360.jpg" /><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;公众号</span></a></li>
+        </ul>
+    </div>
+
     <div class="header" style="background-color:#1b1e24">
         <div class="container">
             <div class="logo">
@@ -51,6 +82,7 @@
             <div class="breadcrumb" style="margin-bottom: 5px; margin-top:10px;border:1px solid #CCCCCC;">
                 <div id="d_brand"><span class="brand">品&nbsp;&nbsp;&nbsp;&nbsp;牌:</span><span attr="0" class="brand css1">全部</span></div>
                 <div id="d_origin" style="padding-top:15px"><span class="brand">销售商:</span><span attr="0" class="brand css1">全部</span><span attr="亚马逊" class="brand css1">亚马逊</span><span attr="京东" class="brand css1">京东</span><span attr="苏宁" class="brand css1">苏宁</span><span attr="天猫" class="brand css1">天猫</span><span attr="淘宝" class="brand css1">淘宝</span></div>
+                <div id="d_san" style="padding-top:15px"><span class="brand">其&nbsp;&nbsp;&nbsp;&nbsp;他:</span><span attr="0" class="brand css1">全部</span><span attr="一段" class="brand css1">一段</span><span attr="二段" class="brand css1">二段</span><span attr="三段" class="brand css1">三段</span><span attr="四段" class="brand css1">四段</span></div>
             </div>
             <div class="ads-grid">
                 <div class="side-bar col-md-3" style="display:none">
@@ -74,44 +106,19 @@
     <!--footer section start-->
     <footer>
         <div class="footer-top" style="padding-top:10px">
-            <div class="container">
-                <div class="foo-grids">
-                    <div class="col-md-3 footer-grid"></div>
-                    <div class="col-md-2 footer-grid">
-                        <h4 class="footer-head" style="font-size:18px">官方微博</h4>
-                        <div>
-                            <img width="80" height="80" src="css/img/aikid360.jpg" />
-                        </div>
+            
+            <div class="footer-bottom text-center">
+                <div class="container">
+                    <div class="footer-logo">
+                        <a href="index.html" style="font-size:28px"><span>Ai</span>Kid360</a>
                     </div>
-                    <div class="col-md-2 footer-grid">
-                        <h4 class="footer-head" style="font-size:18px">公众号</h4>
-                        <div>
-                            <img width="80" height="80" src="css/img/aikid360.jpg" />
-                        </div>
+                    <div style="height:20px;color:white">
+                        鲁ICP备18010337号 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;邮箱：<a style="color:white" href="mailto:aikid360@126.com">aikid360@126.com</a>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;QQ群：556261124
                     </div>
-                    <div class="col-md-3 footer-grid">
-                        <h4 class="footer-head" style="font-size:18px">联系我们</h4>
-                        <div>
-                            <address>
-                                <ul class="location"></ul>
-                                <ul class="location">
-                                    <li><span class="glyphicon glyphicon-earphone"></span></li>
-                                    <li>QQ群：556261124</li>
-                                    <div class="clearfix"></div>
-                                </ul>
-                                <ul class="location">
-                                    <li><span class="glyphicon glyphicon-envelope"></span></li>
-                                    <li>邮箱：<a href="mailto:aikid360@126.com">aikid360@126.com</a></li>
-                                    <div class="clearfix"></div>
-                                </ul>
-                            </address>
-                        </div>
-                        <div class="clearfix"></div>
-                    </div>
-                    <div class="col-md-2 footer-grid"></div>
+                    <div class="clearfix"></div>
                 </div>
             </div>
-           
         </div>
     </footer>
     <!--footer section end-->

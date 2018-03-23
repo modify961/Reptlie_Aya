@@ -116,6 +116,17 @@ namespace MongHelp.AiKid.Helper
             return insert(onLineModel);
         }
         /// <summary>
+        /// 更新点击次数
+        /// </summary>
+        /// <param name="brandModel"></param>
+        /// <returns></returns>
+        public void updateClick(string guid,int num)
+        {
+            IMongoQuery query = Query.EQ("guid", guid);
+            IMongoUpdate updateItem = Update.Set("clickN", num);
+            _mongoCollection.Update(query, updateItem);
+        }
+        /// <summary>
         /// 
         /// </summary>
         /// <param name="agenter"></param>
@@ -141,6 +152,14 @@ namespace MongHelp.AiKid.Helper
                 return true;
             }
             return false;
+        }
+        /// <summary>
+        /// 删除全部数据
+        /// </summary>
+        /// <param name="agenter"></param>
+        public void delete()
+        {
+            _mongoCollection.RemoveAll();
         }
     }
 }

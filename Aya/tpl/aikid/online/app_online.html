@@ -6,15 +6,15 @@
                     <table id="agentIpList" class="table table-striped m-b-none">
                         <thead>
                             <tr>
-                                <th style="width:30%">ID</th>
                                 <th style="width:40%">来源</th>
+                                <th style="width:30%">点击次数</th>
                                 <th style="width:30%">推荐</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr ng-repeat="x in waitupData" style="cursor:pointer" ng-click="show('{{x._id}}')" >
-                                <td>{{x._id}}</td>
                                 <td>{{x.origin}}</td>
+                                <td>{{x.clickN}}</td>
                                 <td><input type="checkbox" ng-model="x.recommend" required><i></i> 是</td>
                             </tr>
                         </tbody>
@@ -59,6 +59,16 @@
                                     <label>销售商</label>
                                     <input type="text" id="origin" class="form-control" ng-model="detail.origin" required>
                                 </div>
+                            </div>
+                            <div class="form-group">
+                                <label>几段</label>
+                                <select ng-model="detail.san" class="form-control m-t">
+                                    <option value=""></option>
+                                    <option value="一段">一段</option>
+                                    <option value="二段">二段</option>
+                                    <option value="三段">三段</option>
+                                    <option value="四段">四段</option>
+                                </select>
                             </div>
                             <div class="form-group">
                                 <label>标签</label>

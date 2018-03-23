@@ -57,7 +57,7 @@ EndProject
 Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "baby", "baby\", "{2FD74610-DE07-4F9C-B982-65F04155E5ED}"
 	ProjectSection(WebsiteProperties) = preProject
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.6.1"
-		ProjectReferences = "{b106e7d1-6008-4686-b0be-08ee364439ed}|AgentIp.Common.dll;{3238bacc-6599-48b7-82f1-d309a999ada1}|AgentIp.Contracts.dll;{DF66FE93-66E6-4E56-AFD8-0C1045B8574E}|AgentIp.Entity.dll;{03382430-CECD-4708-939B-7F78927DE07B}|Base.Entity.dll;{437BB321-4A85-4A8D-9690-4D86B92E5545}|Base.Logic.dll;{E01BF00B-4725-47A9-8DA6-3FFBD87F3EC1}|Base.Common.dll;{67d21856-6e30-46b5-9ee6-ff6178f91b09}|AiKid.Logic.dll;{804D6359-9D58-4599-86FD-E26CAF07E67E}|AiKid.Common.dll;{01FB8E1D-423C-4BA4-A7AA-E5DD23D2ACFE}|AiKid.Contracts.dll;{D0AD2904-F54B-48E2-BEA7-1763A32A233E}|AiKid.Entity.dll;{A0626B25-D126-4EEE-A324-740DB24CFBE8}|MongHelp.dll;"
+		ProjectReferences = "{b106e7d1-6008-4686-b0be-08ee364439ed}|AgentIp.Common.dll;{3238bacc-6599-48b7-82f1-d309a999ada1}|AgentIp.Contracts.dll;{DF66FE93-66E6-4E56-AFD8-0C1045B8574E}|AgentIp.Entity.dll;{03382430-CECD-4708-939B-7F78927DE07B}|Base.Entity.dll;{437BB321-4A85-4A8D-9690-4D86B92E5545}|Base.Logic.dll;{E01BF00B-4725-47A9-8DA6-3FFBD87F3EC1}|Base.Common.dll;{804D6359-9D58-4599-86FD-E26CAF07E67E}|AiKid.Common.dll;{01FB8E1D-423C-4BA4-A7AA-E5DD23D2ACFE}|AiKid.Contracts.dll;{D0AD2904-F54B-48E2-BEA7-1763A32A233E}|AiKid.Entity.dll;{A0626B25-D126-4EEE-A324-740DB24CFBE8}|MongHelp.dll;{67d21856-6e30-46b5-9ee6-ff6178f91b09}|AiKid.Logic.dll;"
 		Debug.AspNetCompiler.VirtualPath = "/localhost_59481"
 		Debug.AspNetCompiler.PhysicalPath = "baby\"
 		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_59481\"

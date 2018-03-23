@@ -3,6 +3,7 @@
     var data = { 'context': {} };
     var brand = "";
     var origin = "";
+    var san = "";
     $.ajax({
         type: "POST",
         data: JSON.stringify(data),
@@ -24,7 +25,7 @@
                 brand = $(this).attr("attr");
                 if (brand == 0)
                     brand = null;
-                searchInfo(brand, origin, 0);
+                searchInfo(brand, origin, san, 0);
             })
 
 
@@ -36,7 +37,18 @@
                 origin = $(this).attr("attr");
                 if (origin == 0)
                     origin = null;
-                searchInfo(brand, origin, 0);
+                searchInfo(brand, origin, san,  0);
+            })
+
+            $("#d_san .css1").bind("click", function () {
+                $("#d_san span").removeClass("brand_over");
+                $(this).addClass("brand_over");
+            })
+            $("#d_san .css1").bind("click", function () {
+                san = $(this).attr("attr");
+                if (san == 0)
+                    san = null;
+                searchInfo(brand, origin, san,  0);
             })
         }
     });
@@ -68,7 +80,7 @@
     });
     searchInfo();
 })
-function searchInfo(brand, origin, current) {
+function searchInfo(brand, origin, san,  current) {
     var detail = {
         "brand": null,
         "origin": null
@@ -104,6 +116,10 @@ function searchInfo(brand, origin, current) {
             if (origin)
                 cachtDate = Enumerable.From(cachtDate)
                     .Where(function (x) { return x.origin == origin })
+                    .ToArray();
+            if (san)
+                cachtDate = Enumerable.From(cachtDate)
+                    .Where(function (x) { return x.san == san })
                     .ToArray();
             $("#more_detail").empty();
             $(cachtDate).each(function (_, flag) {

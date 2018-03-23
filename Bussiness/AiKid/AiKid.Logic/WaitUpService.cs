@@ -25,6 +25,7 @@ namespace AiKid.Logic
         public Stream count(ImpContext context)
         {
             MongWaitUp mongWaitUp = new MongWaitUp(Constants.daname);
+           
             return new ToStream().ToStreams(mongWaitUp.obtainAll().Count());
         }
         /// <summary>
@@ -42,6 +43,10 @@ namespace AiKid.Logic
                 ReferenceLoopHandling = ReferenceLoopHandling.Ignore
             });
             mongWaitUp.delete(waitUpModel);
+            string pic = waitUpModel.pictiue.Replace("https://www.aikid360.com:8010/", "");
+            pic = string.Format("{0}{1}", @"C:\web\akidImg\", pic);
+            if (File.Exists(pic))
+                File.Delete(pic);
             return new ToStream().ToStreams(mongWaitUp.obtainAll());
         }
 

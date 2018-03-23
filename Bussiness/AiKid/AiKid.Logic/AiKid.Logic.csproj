@@ -35,6 +35,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -45,6 +46,7 @@
   <ItemGroup>
     <Compile Include="AikidWebService.cs" />
     <Compile Include="BrandService.cs" />
+    <Compile Include="EtcToolService.cs" />
     <Compile Include="OnLineService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="WaitUpService.cs" />
